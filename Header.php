@@ -1,8 +1,28 @@
 <?php
 
+/**
+ * Clase para gestionar el encabezado de la página web.
+ * 
+ * Esta clase genera el encabezado de la página web, que incluye la estructura básica
+ * del documento HTML, enlaces a los estilos de Bootstrap, un logotipo, una barra de navegación
+ * personalizada, y un carrusel con imágenes.
+ */
 class Header {
     
-    // Método para mostrar el encabezado
+    /**
+     * Muestra el encabezado de la página web.
+     * 
+     * Este método genera el HTML necesario para el encabezado de la página, lo que incluye:
+     * 1. Estructura básica del documento HTML (con los metadatos y el título de la página).
+     * 2. Enlace al archivo CSS de Bootstrap desde un repositorio remoto.
+     * 3. Estilos personalizados para el cuerpo, el pie de página y la barra de navegación.
+     * 4. Un encabezado con el logotipo y la barra de navegación.
+     * 5. Un carrusel con imágenes.
+     * 
+     * Finalmente, este método imprime toda la estructura HTML que se utilizará en la página.
+     * 
+     * @return void
+     */
     public function mostrarHeader() {
         // Imprime la estructura básica de un documento HTML con el encabezado y los estilos
         echo '<!DOCTYPE html>

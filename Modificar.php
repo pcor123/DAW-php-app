@@ -3,9 +3,27 @@
 require_once('Connexio.php');
 require_once('Header.php');
 
+/**
+ * Clase para gestionar la modificación de productos en la base de datos.
+ * 
+ * Esta clase permite mostrar un formulario con la información de un producto existente
+ * para que el usuario pueda modificarla. El formulario se completa con los valores actuales 
+ * del producto y, tras ser enviado, actualiza los datos en la base de datos.
+ */
 class Modificar {
 
-    // Método para mostrar el formulario de modificación del producto
+    /**
+     * Muestra el formulario de modificación de un producto.
+     * 
+     * Este método realiza los siguientes pasos:
+     * 1. Verifica si el ID del producto es válido.
+     * 2. Consulta la base de datos para obtener los datos del producto a modificar.
+     * 3. Muestra un formulario pre-rellenado con la información del producto.
+     * 4. Permite al usuario modificar los campos y enviar los cambios a través de un formulario.
+     * 
+     * @param int $id ID del producto a modificar.
+     * @return void
+     */
     public function mostrarFormulari($id) {
         // Verifica si el ID del producto es válido
         if (!isset($id) || !is_numeric($id)) {

@@ -3,9 +3,25 @@
 require_once('Connexio.php');
 require_once('Header.php');
 
+/**
+ * Clase para gestionar la visualización de la lista de productos en la página principal.
+ * 
+ * Esta clase permite mostrar todos los productos registrados en la base de datos, con sus detalles como nombre,
+ * descripción, precio y categoría. Además, ofrece opciones para modificar o eliminar productos existentes.
+ */
 class Principal {
     
-    // Método para mostrar la lista de productos
+    /**
+     * Muestra la lista de productos en formato tabla.
+     * 
+     * Este método realiza los siguientes pasos:
+     * 1. Consulta la base de datos para obtener la lista de productos con la categoría asociada.
+     * 2. Muestra una tabla con los productos encontrados, incluyendo su ID, nombre, descripción, precio y categoría.
+     * 3. Ofrece botones para agregar, modificar o eliminar productos.
+     * 4. Si no se encuentran productos, muestra un mensaje indicativo.
+     * 
+     * @return void
+     */
     public function mostrarProductes() {
         // Obtiene la conexión a la base de datos
         $conexionObj = new Connexio();
